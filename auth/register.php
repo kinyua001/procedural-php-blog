@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (isset($_SESSION["username"]) === true) {
+  //prevent unauthorized access
+  header("location:../dashboard/index.php?message=welcome");
+  exit();
+}
 include_once('../layouts/header.php');
 
 ?>
