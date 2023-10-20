@@ -11,4 +11,9 @@ if (isset($_GET["success"])) {
 		$m = "welcome Back";
 		echo '<p class="success">' . $m . '</p>';
 	}
+	if ($_GET["success"] === "logout") {
+		//display success message if user is registered succssfly
+		$m = "Bye See You Later!";
+		echo '<p class="success">' . $m . '</p>';
+	}
 }

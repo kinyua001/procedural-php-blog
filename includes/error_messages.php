@@ -31,6 +31,9 @@ if (isset($_GET["message"])) {
 	} else if ($_GET["message"] === "passworderror") {
 		$m = "Incorrect Password ,Please try again ";
 		echo '<p class="error">' . $m . '</p>';
+	} else if ($_GET["message"] === "middleware") {
+		$m = "Unauthorized Access ";
+		echo '<p class="error">' . $m . '</p>';
 	}
 
 

@@ -146,7 +146,7 @@ function LoginUser($databaseConnection, $UserName, $UserPassword)
 		//start session
 		session_start();
 		$_SESSION["name"] = $credentialsExists["Name"];
-
+		$_SESSION["ID"] = $credentialsExists["id"];
 		$_SESSION["username"] = $credentialsExists["UserName"];
 		header("location:../dashboard/index.php?success=welcome");
 		exit();

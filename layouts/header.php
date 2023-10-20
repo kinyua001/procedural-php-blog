@@ -82,9 +82,9 @@ session_start();
 
 
 
-                            <?php if (isset($_SESSION["name"])): ?>
+                            <?php if (isset($_SESSION["ID"])): ?>
                                 <a href="<?php echo APP_URL; ?>dashboard/index.php" class="nav-item nav-link">dashboard</a>
-                                <a href="<?php echo APP_URL; ?>dashboard/index.php" class="nav-item nav-link">logout</a>
+                                <a href="<?php echo APP_URL; ?>auth/logout.php" class="nav-item nav-link">logout</a>
                             <?php else: ?>
                                 <a href="<?php echo APP_URL; ?>auth/login.php" class="nav-item nav-link">Login</a>
                                 <a href="<?php echo APP_URL; ?>auth/register.php" class="nav-item nav-link">Register</a>
