@@ -1,7 +1,7 @@
 <?php
 
 //check if register fields are empty
-function emptyRegisterFields($UserName, $Name, $UserEmail, $UserPassword, $UserConfirmPassord)
+function emptyRegisterFields($UserName, $Name, $UserEmail, $UserPassword, $UserConfirmPassword)
 {
 	$res = false;
 	if (empty($UserName) || empty($Name) || empty($UserEmail) || empty($UserPassword) || empty($UserConfirmPassord)) {

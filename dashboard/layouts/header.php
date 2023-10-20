@@ -1,3 +1,11 @@
+<?php
+
+define("APP_URL", "http://127.0.0.1:8000/");
+define("APP_NAME", "Blogy");
+define("APP_DEV", "Kinyuacodes");
+
+
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -109,7 +117,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">BlogPost</a>
-                                <a class="dropdown-item" href="#">Tag</a>
+                                <a class="dropdown-item" href="<?php echo APP_URL; ?>dashboard/tags/index.php">Tag</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">User</a>
                             </div>
@@ -227,13 +235,16 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="p-t-30">
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="<?php echo APP_URL; ?>dashboard/index.php" aria-expanded="false"><i
+                                    class="mdi-border-all"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="index.html" aria-expanded="false"><i class="fas fa-file-word"></i><span
                                     class="hide-menu">BlogPosts</span></a></li>
 
 
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-buttons.html" aria-expanded="false"><i class="fas fa-tags"></i><span
-                                    class="hide-menu">Tags</span></a></li>
+                                href="<?php echo APP_URL; ?>dashboard/tags/index.php" aria-expanded="false"><i
+                                    class="fas fa-tags"></i><span class="hide-menu">Tags</span></a></li>
 
 
                     </ul>
@@ -261,17 +272,6 @@
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-
-                                    <div class="alert alert-success">
-                                        <?php require_once("../includes/success_messages.php"); ?>
-                                        <?php if (isset($_SESSION["username"])) {
-                                            echo $_SESSION["username"];
-                                        } ?>
-                                    </div>
-
-
-
-
                                 </ol>
                             </nav>
                         </div>

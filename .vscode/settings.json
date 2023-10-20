@@ -5,6 +5,7 @@
         "registerusersuccessfully",
         "rowdata",
         "securepassword",
-        "signin"
+        "signin",
+        "storetag"
     ]
 }

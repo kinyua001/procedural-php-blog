@@ -1,16 +1,13 @@
 <?php
 session_start();
-define("APP_URL", "http://127.0.0.1:8000/");
-define("APP_NAME", "Blogy");
-define("APP_DEV", "Kinyuacodes");
-
 if (isset($_SESSION["username"]) === false) {
     //prevent unauthorized access
     header("location:../includes/index.php?message=middleware");
     exit();
 }
+include_once("layouts/header.php");
+
 ?>
-<?php include_once("layouts/header.php"); ?>
 <div class="col-md-12">
     <div class="card">
         <div class="card-body">
